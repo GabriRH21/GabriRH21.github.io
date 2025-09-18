@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <title>Javascript Projects</title>
+  <link rel="icon" href="/assets/LogoUL-DSyBdB6i.png" type="image/png">
+  <script type="module" crossorigin src="/assets/projects-eywf2Wmf.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/transitions-C0tB6dqK.js">
+  <link rel="stylesheet" crossorigin href="/assets/transitions-De2kx-hY.css">
+  <link rel="stylesheet" crossorigin href="/assets/projects-D42rOpAf.css">
+</head>
+<body>
+  <main>
+    <div class="cerebritosMenu" id="cerebritosAppMenu">
+    </div>
+    <div class="JavascriptProjectsDiv" id="JavascriptProjectsId">
+      <aside>
+        <div class="back">
+          <i class="fa-solid fa-circle-arrow-left"></i>
+        </div>
+        <ul class="Links">
+          <li onclick="Navigate(0)" id="IntroductionAside" class="activeLink"><i class="fa-solid fa-eye"></i>
+              <p class="introAsideText">Introduction</p>
+          </li>
+          <li onclick="Navigate(1)" id="BallAside"> <i class="fa-solid fa-broom-ball"></i>
+              <p class="BallAsideText">Ball excersice</p>
+          </li>
+          <li onclick="Navigate(2)" id="PokerAside"><i class="fa-solid fa-diamond"></i>
+              <p class="PokerAsideText">Poker excersice</p>
+          </li>
+          <li onclick="Navigate(3)" id="AdriAside"><i class="fa-solid fa-hands-holding-child"></i>
+              <p class="AdriAsideText">Adri's page</p>
+          </li>
+        </ul>
+      </aside>
+      <div class="swiper mySwiper">
+        <div class="SlideContainer swiper-wrapper">
+          <div class="swiper-slide introduction-slide">
+            <div class="introContent">
+              <h1><span class="stylized-name">Javascript</span> Projects</h1>
+              <h2>Here are some of my personal projects</h2>
+              <p class="IntroText">In this section, you'll find some of the projects I've developed using JavaScript. 
+              These are small applications and exercises that have allowed me to explore key concepts 
+              of the language, from DOM manipulation to creating dynamic interactions. 
+              Each one has been an opportunity to learn, experiment, and strengthen my skills as a developer.</p>
+            </div>
+            <div class="ProjectsPreview">
+              <div class="card">
+                <div class="face front">
+                  <img src="/assets/BallProjectLogo-H_jbQJ_M.png" alt="">
+                  <h3>Ball Project</h3>
+                </div>
+                <div class="face back">
+                  <h3 id="BallCardBackTitle">Ball Project</h3>
+                  <p>JavaScript app where you control a ball on a canvas using buttons, practicing animation and events.</p>
+                  <div class="link">
+                    <a href="#" onclick="Navigate(1)">Details</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="face front">
+                  <img src="/assets/PokerProjectLogo-BUDlZhPa.png" alt="">
+                  <h3>Poker Project</h3>
+                </div>
+                <div class="face back">
+                  <h3 id="PokerCardBackTitle">Poker Project</h3>
+                  <p>Poker game built with JavaScript using MVC architecture and object-oriented programming.</p>
+                  <div class="link">
+                    <a href="#" onclick="Navigate(2)">Details</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="face front">
+                  <img src="/assets/AdriProjectLogo-Cgbi0xZV.png" alt="">
+                  <h3>Adri's Page</h3>
+                </div>
+                <div class="face back">
+                  <h3 id="AdriCardBackTitle">Adri's Page</h3>
+                  <p>In progress</p>
+                  <div class="link">
+                    <a href="#" onclick="Navigate(3)">Details</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="ball-project">
+              <h1>Ball Project</h1>
+              <div class="ball-description">
+                <p>
+                  This work consists of developing a simple graphical application based on 
+                  the <span class="stylized-ball-name">event-driven programming</span> paradigm. The objective is to represent a ball inside 
+                  a canvas and allow the user to move it in different directions through button interactions.
+                </p>
+                <p>
+                  The interface displays a canvas where the ball is drawn, along with four control buttons: 
+                  Up, Down, Left, and Right. Each time the user clicks one of these buttons, an event is triggered 
+                  that updates the ball's position on the canvas in the selected direction.
+                </p>
+                <p>
+                  If you want to see the code click <a href="https://github.com/GabrielRH21/Ball-page-practice/tree/master/Web/www/js" target="_blank" style="color: #fb8260;">here</a>.
+                </p>
+                <p>
+                  In this second version, since it is a project meant for experimentation, the original exercise was expanded 
+                  to make it more complex and interactive. The goal shifted from moving the ball through simple fixed displacements 
+                  to simulating the motion of a ball in a <span class="stylized-ball-name">2D physical environment</span>.
+                </p>
+                <p>
+                  For this purpose, collisions with the canvas borders were added along with basic forces such as 
+                  <span class="stylized-ball-name">gravity</span> and <span class="stylized-ball-name">air resistance</span>. 
+                  In this way, the buttons no longer move the ball directly but instead apply a force in the selected direction, 
+                  resulting in more realistic motion with acceleration, slowing down, and bouncing when hitting the walls.
+                </p>
+              </div>
+              <div class="canvasStuff">
+                <div id="CanvasDiv"  class="CanvasContainer">
+                  <canvas id ="ballCanvas" width="500" height="500" style="border: 10px solid #999;"></canvas>
+                </div>
+                <div class="clearfix" id="ui-container">
+                  <div id="slidecontainer">
+                      <button class="up" id="up">Arriba</button>
+                      <button class="left" id="left">Izquierda</button>
+                      <button class="right" id="right">Derecha</button>
+                      <button class="down" id="down">Abajo</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide poker-slide">
+            <h1 class="heading">Poker Project</h1>
+            <div id="demo"  class="">
+              <h4 id="firstPlay"></h4>
+              <canvas id ="firstcanvas" width="800" height="300" style="border: 1px solid #999;"></canvas>
+              <h3 id="winner"></h3>
+              <h3 id="cards"></h3>
+              <canvas id ="secondcanvas" width="800" height="300" style="border: 1px solid #999;"></canvas>
+              <h4 id="secondPlay"></h4>
+              <button class="dealOne" id="dealOne" style="width: 10%;">Deal Hand1</button>
+              <button class="dealTwo" id="dealTwo" style="width: 10%;">Deal Hand2</button>
+              <button class="play" id="play" style="width: 10%;">Play</button>
+            </div>
+            <div class="clearfix" id="ui-container">
+              <div id="slidecontainer">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide adri-slide">
+            <h1 class="heading">Adri's Page</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
