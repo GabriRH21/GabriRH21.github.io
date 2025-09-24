@@ -8,10 +8,10 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
   <title>Javascript Projects</title>
   <link rel="icon" href="/assets/LogoUL-DSyBdB6i.png" type="image/png">
-  <script type="module" crossorigin src="/assets/projects-C4OXB4TE.js"></script>
+  <script type="module" crossorigin src="/assets/projects-eoU6Pq2R.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/transitions-C0tB6dqK.js">
   <link rel="stylesheet" crossorigin href="/assets/transitions-De2kx-hY.css">
-  <link rel="stylesheet" crossorigin href="/assets/projects-BOw2zBR0.css">
+  <link rel="stylesheet" crossorigin href="/assets/projects-Oa0DkTJF.css">
 </head>
 <body>
   <main>
@@ -109,7 +109,7 @@
                   that updates the ball's position on the canvas in the selected direction.
                 </p>
                 <p>
-                  If you want to see the code click <a href="https://github.com/GabrielRH21/Ball-page-practice/tree/master/Web/www/js" target="_blank" style="color: #fb8260;">here</a>.
+                  If you want to see the original code click <a href="https://github.com/GabrielRH21/Ball-page-practice/tree/master/Web/www/js" target="_blank" style="color: #fb8260;">here</a>.
                 </p>
                 <p>
                   In this second version, since it is a project meant for experimentation, the original exercise was expanded 
@@ -129,10 +129,10 @@
                 </div>
                 <div class="clearfix" id="ui-container">
                   <div id="slidecontainer">
-                      <button class="up" id="up">Arriba</button>
-                      <button class="left" id="left">Izquierda</button>
-                      <button class="right" id="right">Derecha</button>
-                      <button class="down" id="down">Abajo</button>
+                      <button class="up" id="up">Up</button>
+                      <button class="left" id="left">Left</button>
+                      <button class="right" id="right">Right</button>
+                      <button class="down" id="down">Down</button>
                   </div>
                 </div>
               </div>
@@ -142,18 +142,46 @@
           <div class="swiper-slide poker-slide">
             <h1 class="heading">Poker Project</h1>
             <div class="poker-layout">
-              <!-- Columna izquierda: texto explicativo -->
               <section class="poker-copy">
                 <p>
-                In Progress
+                  This project originated as one of the final assignments in my university Web Development course. 
+                  The original code can be found <span class="stylized-poker-name"><a href="https://github.com/GabrielRH21/MVC-Poker-WebPage/tree/master/Web/www/js" target="_blank" style="color: #4CB3D4;">here</a></span>. 
+                </p>
+                <p>
+                  The main objectives were to practice 
+                  development based on the <span class="stylized-poker-name">MVC</span> (Model-View-Controller) pattern, event-driven programming, graphical 
+                  programming, and the use of <span class="stylized-poker-name">object-oriented programming</span>.
+                </p>
+                <p>
+                  The initial result was a simple application that simulated a poker game between two five-card hands. 
+                  From that foundation, I decided to keep working on it to make the project <span class="stylized-poker-name">more realistic and complex</span>, 
+                  while continuing to strengthen my skills.
+                </p>
+                <p>
+                  Among the improvements I introduced are a third canvas representing the community cards on the table, 
+                  emulating the dynamics of a real poker game, as well as a betting system that allows the player to 
+                  choose an amount and face an AI-controlled opponent capable of deciding whether to call or fold.
+                </p>
+                <p>
+                  Overall, the project combines the <span class="stylized-poker-name">academic principles</span> of the original assignment with a <span class="stylized-poker-name">more ambitious 
+                  development</span> that enhances both the game logic and the interactive experience.
                 </p>
               </section>
 
-              <!-- Columna derecha: UI / canvases -->
               <section class="poker-ui">
-                <div id="demo">
+              <div class="game-container">
+    
+                <!-- 🎴 TABLERO (a la izquierda) -->
+                <div class="board" id="demo">
 
-                  <h4 id="opponent" class="pokerRol">Opponent <i class="fa-solid fa-user-secret"></i></h4>
+                  <div class="opponent-header">
+                    <h4 id="opponent" class="pokerRol">
+                      <i class="fa-solid fa-user-secret"></i> Opponent
+                    </h4>
+                    <h4 class="enemyAmount" id="enemyAmount">
+                      <i class="fa-solid fa-sack-dollar"></i> : 1000
+                    </h4>
+                  </div>
                   <div class="hand-row">
                     <!-- canvas 1 -->
                     <canvas id="firstcanvas" width="500" height="300" class="poker-canvas"></canvas>
@@ -161,37 +189,62 @@
                   </div>
 
                   <h3 id="winner"></h3>
-                  <canvas id="thirdcanvas" width="500" height="300" class="poker-canvas"></canvas>
+                  
+                  <div class="hand-row">
+                    <canvas id="thirdcanvas" width="500" height="300" class="poker-canvas"></canvas>
+                    <h4 id="totalPot" class="pokerPlay"><i class="fa-solid fa-sack-dollar"></i> Total Pot: 0 </h4>
+                  </div>
+                  
                   <h3 id="cards"></h3>
 
                   <!-- canvas 2 -->
-                   <div class="hand-row">
+                  <div class="hand-row">
                     <canvas id="secondcanvas" width="500" height="300" class="poker-canvas"></canvas>
                     <h4 id="secondPlay" class="pokerPlay"></h4>
                   </div>
-                  <h4 id="pokerPlayer" class="pokerRol">You <i class="fa-solid fa-user"></i></h4>
+                  
+                  <div class="player-header">
+                    <h4 id="pokerPlayer" class="pokerRol">
+                      <i class="fa-solid fa-user"></i> You
+                    </h4>
+                    <h4 class="playerAmount" id="playerAmount">
+                      <i class="fa-solid fa-sack-dollar"></i> : 1000
+                    </h4>
+                    </div>
+                </div>
 
-                  <div class="poker-actions">
-                    <button class="dealOne" id="dealOne">Deal Hand1</button>
-                    <button class="dealTwo" id="dealTwo">Deal Hand2</button>
-                    <button class="play" id="play">Play</button>
+                <div class="controls">
+                  <button class="turn" id="turn">Turn</button>
+                  <button class="finalPlay" id="finalPlay">End Play</button>
+                  <div class="bet-group">
+                    <button id="buttonMinus">-</button>
+                    <span id="betAmount"> 0 </span>
+                    <button id="buttonPlus">+</button>
                   </div>
+                  <button class="bet" id="bet">Bet</button>
+                  <button class="restartPoker" id="restartPoker">Restart</button>
                 </div>
 
-                <div class="clearfix" id="ui-container">
-                  <div id="slidecontainer"></div>
-                </div>
-              </section>
+              </div>
+
+              <div class="clearfix" id="ui-container">
+                <div id="slidecontainer"></div>
+              </div>
+            </section>
             </div>
-          </div>
           </div>
 
           <div class="swiper-slide adri-slide">
             <h1 class="heading">Adri's Page</h1>
+            <p>Project on progress</p>
           </div>
         </div>
       </div>
     </div>
   </main>
+  <div id="endScreen" class="end-screen hidden">
+      <h1 id="endMessage"></h1>
+      <button id="restartBtn">Play Again</button>
+    </div>
 </body>
 </html>
